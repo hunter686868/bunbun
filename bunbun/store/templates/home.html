@@ -1,0 +1,23 @@
+<!-- store/templates/store/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Shop</title>
+</head>
+<body>
+    <h1>Welcome to our Jewelry Shop</h1>
+    <div>
+        {% for product in products %}
+            <div>
+                <h2>{{ product.name }}</h2>
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:200px;height:auto;">
+                <p>{{ product.description }}</p>
+                <p>${{ product.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
